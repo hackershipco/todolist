@@ -1,15 +1,7 @@
 Rails.application.routes.draw do
-  get 'tasks/create'
+  
+  resources :tasks, only: [:index, :new, :create, :update, :destroy]
 
-  get 'tasks/update'
-
-  get 'tasks/index'
-
-  get 'tasks/show'
-
-  get 'tasks/destroy'
-
-  get 'home/index'
   root 'home#index'
   
   # The priority is based upon order of creation: first created -> highest priority.

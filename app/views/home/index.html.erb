@@ -3,3 +3,13 @@
   <p>This is a simple to-do list application, where we can save things we need to do.</p>
   <!-- <p><a class="btn btn-primary btn-lg"  role="button">Learn more</a></p> -->
 </div>
+
+<div class="container">
+	<%= form_for @task, :remote => true, :format => :json do |f| %>
+		<div class="control-group">
+			<%= f.label :title %>
+			<%= f.text_field :title , :class => 'form-control' %>
+		</div>
+	 <%= f.submit 'Add Task', :class => "btn btn-success"  %>
+	<% end %>
+</div>
