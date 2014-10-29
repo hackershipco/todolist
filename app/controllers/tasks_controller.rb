@@ -1,5 +1,6 @@
 class TasksController < ApplicationController
   def index
+    @tasks = Task.all
   end
 
   def create
@@ -10,9 +11,6 @@ class TasksController < ApplicationController
   end
 
   def update
-  end
-
-  def index
   end
 
   def show
